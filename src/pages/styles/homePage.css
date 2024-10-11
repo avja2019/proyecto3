@@ -1,0 +1,20 @@
+.homepage {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.homepage__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.homepage__filter {
+  width: 250px;
+  background-color: white;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+}
+

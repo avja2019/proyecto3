@@ -1,0 +1,41 @@
+.prodcard {
+    padding: 20px;
+}
+
+.prodcard__container{
+    position: relative;
+    width: 250px;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.prodcard__img {
+    width: 90%;
+    height: 200px
+}
+
+.prodcard__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.prodcard__data {
+    width: 100%;
+}
+
+.prodcard__button {
+    position: absolute;
+    top: 85%;
+    opacity: 0;
+    transition: opacity .6s;
+}
+
+.prodcard__container:hover .prodcard__button {
+    opacity: 1;
+}

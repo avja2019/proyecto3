@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #F9F9F9; /* Color principal: Blanco */
+  --secondary-color: #333333; /* Color secundario: Gris Oscuro */
+  --highlight-color: #FF5722; /* Color de resaltado: Naranja */
+  --background-color: #FFFFFF; /* Color de fondo: Blanco */
+  --link-color: #1976D2; /* Color de enlaces: Azul Marino */
+  --accent-color: #FFC107; /* Color de acento: Amarillo Mostaza */
+  --button-color: #4CAF50; /* Color del botón: Verde */
+  --button-text-color: #FFFFFF; /* Color del texto del botón: Blanco */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input, button {
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: transform 0.25s;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.25s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+

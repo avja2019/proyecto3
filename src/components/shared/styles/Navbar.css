@@ -1,0 +1,33 @@
+.navbar{
+    display: flex;
+    background-color: var(--secondary-color);
+    width: 100%;
+    color: #fff;
+    height: 50px;
+}
+
+.Name_logo{
+    display: flex;
+    align-items: flex-start;
+}  
+
+.container-fluid {
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar-nav{
+    display: flex;
+    gap:10px;
+    list-style: none;
+    justify-content: flex-end;
+    max-width: 100%;
+    padding: 10px;   
+}
+
+.active{
+    color: rgb(255, 255, 255);
+}
+.disable{
+   color: var(--highlight-color);
+   text-decoration: none; 
+}
