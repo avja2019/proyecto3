@@ -9,6 +9,7 @@ import ProductId from './pages/ProductId'
 import Purchases from './pages/Purchases'
 import Product from './pages/Product'
 import Cart from './pages/Cart'
+import ProtectedRoutes from './pages/ProtectedRoutes'
 
 function App() {
 
@@ -20,9 +21,11 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/Productos' element={<Product/>}/>
-        <Route path='/Cart' element={<Cart/>}/>
         <Route path='/product/:id' element={<ProductId/>}/>
-        <Route path='/purchases' element={<Purchases/>}/>
+        <Route element={<ProtectedRoutes/>}>
+          <Route path='/Cart' element={<Cart/>}/>
+          <Route path='/purchases' element={<Purchases/>}/> 
+        </Route>
       </Routes>
     </div>
   )

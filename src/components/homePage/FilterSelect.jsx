@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import './styles/filterSelect.css'
 
 const FilterSelect = ({ setCategoryValue }) => {
-  const [categories, getCategories] = useFetch();
+  const [categories, getCategories] = useFetch('');
 
   useEffect(() => {
     getCategories("/products/categories");
@@ -12,6 +12,9 @@ const FilterSelect = ({ setCategoryValue }) => {
   const itemSelect = useRef();
   const handleChange = useCallback(() => {
     setCategoryValue(itemSelect.current.value);
+    console.log(itemSelect.current.value);
+
+    
   }, [setCategoryValue]);
 
   // console.log(categories);

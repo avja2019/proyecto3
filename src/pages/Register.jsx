@@ -10,6 +10,8 @@ const Register = () => {
 
   const submit = data => {
     useAuth('/users', data)
+    console.log(data);
+    
     reset({
       email: '',
       username:'',
@@ -49,11 +51,16 @@ const Register = () => {
             <label htmlFor="email">Email</label>
             <input {...register('email')} id='email' type="email" />
           </div>
+          <div>
+            <label htmlFor="username">Usuario</label>
+            <input {...register('username')} id='username' type="text" />
+          </div> 
+          <div>
+            <label htmlFor="password">Password</label>
+            <input {...register('password')} id='password' type="text" />
+          </div> 
         </div>
-        {/* <div>
-          <label htmlFor="password">Password</label>
-          <input {...register('password')} id='password' type="text" />
-        </div> */}
+         
         {/* <div className='register__address'>
           <h2>Address</h2>
           <label htmlFor="city">City</label>
