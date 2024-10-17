@@ -1,13 +1,39 @@
 
+import { useDispatch } from "react-redux";
+import useFetch from "../../hooks/useFetch";
+import { postCartThunk } from "../../store/slices/cart.slice";
 import "./styles/prodCard.css";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const ProdCard = ({ prod }) => {
   const navigate = useNavigate();
 
+
   const handleDetail = () => {
     navigate(`product/${prod.id}`);
   };
+
+  //traer los datos de un usurio por defecto para el login
+
+  const [usuario, getUsuario] = useFetch('');
+
+  useEffect(() => {
+    getUsuario("/users/1");
+    console.log(usuario);
+    
+  }, []);
+
+  const handleAddCart = () => {
+    //const today = new Date().toISOString().split('T')[0];
+    // dispatch(
+    //     postCartThunk({
+    //       userId: usuario?.id,
+    //       date: today,
+    //       products:[{productId:prod.id,quantity:1}]
+    //   })
+    // );
+  }
   //console.log(prod);
 
   return (
@@ -21,7 +47,7 @@ const ProdCard = ({ prod }) => {
           <div className="prodcard__title">{prod.title}</div>
         </div>
         <div className="prodcard__button">
-          <button>Add to cart</button>
+          <button onClick={handleAddCart}>Add to cart</button>
         </div>
       </div>
     </div>

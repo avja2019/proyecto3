@@ -26,6 +26,7 @@ function App() {
           <Route path='/Cart' element={<Cart/>}/>
           <Route path='/purchases' element={<Purchases/>}/> 
         </Route>
+        <Route path= '*' element={<h2>This route does not exist</h2>}/>
       </Routes>
     </div>
   )
